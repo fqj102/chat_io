@@ -25,6 +25,10 @@ app.get('/users', function (req, res) {
     res.send({users});
 });
 
+app.get('/sockets', function (req, res) {
+    res.send(onlineUsers);
+});
+
 server.listen(port, () => {
     console.log(`server open ${port}`);
 });
